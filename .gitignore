@@ -1,0 +1,22 @@
+# Dependencies and build output
+node_modules
+dist
+dist-ssr
+*.local
+
+# Secrets (this app has none, but never commit them)
+.env
+.env.*
+!.env.example
+
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# Editor and system files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+Thumbs.db
