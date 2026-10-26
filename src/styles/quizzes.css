@@ -1,0 +1,109 @@
+/* ---------- Quiz editor ---------- */
+.options-fieldset {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  margin: 0;
+  padding: 0;
+  border: none;
+  min-width: 0;
+}
+.options-fieldset legend {
+  margin-bottom: var(--space-2);
+  padding: 0;
+}
+
+.option-row {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+.option-row input[type="radio"] {
+  flex-shrink: 0;
+  width: 22px;
+  height: 22px;
+  accent-color: var(--rose);
+}
+.option-letter {
+  flex-shrink: 0;
+  width: 18px;
+  font-weight: 800;
+  color: var(--deep-rose);
+}
+
+/* ---------- Taking a quiz ---------- */
+.quiz-question {
+  margin: 0;
+  font-size: var(--fs-lg);
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+.quiz-option {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  width: 100%;
+  min-height: 52px;
+  padding: var(--space-3) var(--space-4);
+  text-align: left;
+  font-size: var(--fs-base);
+  font-weight: 600;
+  line-height: 1.4;
+  color: var(--text);
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  overflow-wrap: anywhere;
+  transition: background var(--transition), border-color var(--transition);
+}
+.quiz-option:hover:not(.locked) { border-color: var(--soft-pink); }
+.quiz-option.selected {
+  background: var(--pale-pink);
+  border-color: var(--rose);
+}
+.quiz-option.locked { cursor: default; }
+.quiz-option.correct {
+  background: var(--success-bg);
+  border-color: #c5e4d4;
+  color: #2f6b4f;
+}
+.quiz-option.wrong {
+  background: var(--error-bg);
+  border-color: #f3c6c1;
+  color: var(--error);
+}
+.quiz-option.dim { color: var(--text-muted); }
+
+.quiz-letter {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 28px;
+  height: 28px;
+  font-size: var(--fs-sm);
+  font-weight: 800;
+  color: var(--deep-rose);
+  background: var(--pale-pink);
+  border-radius: 50%;
+}
+.quiz-option.correct .quiz-letter,
+.quiz-option.wrong .quiz-letter { background: var(--white); }
+
+/* ---------- Results ---------- */
+.score-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-2);
+  text-align: center;
+  padding: var(--space-6) var(--space-5);
+}
+.score-big {
+  font-size: 3rem;
+  font-weight: 800;
+  line-height: 1.1;
+  color: var(--deep-rose);
+}

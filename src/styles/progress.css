@@ -1,0 +1,57 @@
+/* ---------- Summary tiles ---------- */
+.stat-grid {
+  display: grid;
+  gap: var(--space-4);
+  grid-template-columns: 1fr 1fr;
+}
+@media (min-width: 900px) {
+  .stat-grid { grid-template-columns: repeat(4, 1fr); }
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  padding: var(--space-4) var(--space-5);
+}
+.stat-value {
+  font-size: 2rem;
+  font-weight: 800;
+  line-height: 1.1;
+  color: var(--deep-rose);
+}
+
+/* ---------- Weekly bar chart ---------- */
+.bars {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: var(--space-2);
+  align-items: end;
+}
+.bar-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-1);
+  min-width: 0;
+}
+.bar-track {
+  display: flex;
+  align-items: flex-end;
+  width: 100%;
+  max-width: 44px;
+  height: 140px;
+  background: var(--soft-white);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+}
+.bar-fill {
+  width: 100%;
+  background: var(--soft-pink);
+  border-radius: var(--radius-sm) var(--radius-sm) 0 0;
+  transition: height 0.3s ease;
+}
+.bar-fill.today { background: var(--rose); }
+.bar-value { font-size: var(--fs-xs); font-weight: 700; }
+.bar-label { font-size: var(--fs-xs); color: var(--text-muted); }
+.today-label { font-weight: 800; color: var(--deep-rose); }

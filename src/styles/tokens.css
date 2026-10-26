@@ -1,0 +1,52 @@
+:root {
+  /* Brand colors */
+  --pale-pink: #fce7f0;
+  --soft-pink: #f8bbd0;
+  --rose: #e879a9;
+  --deep-rose: #c44578;
+  --white: #ffffff;
+  --soft-white: #fffafc;
+
+  /* Text and borders */
+  --text: #49343d;
+  --text-muted: #7a6670;
+  --border: #f0e1e7;
+
+  /* Feedback colors (soft, to match the theme) */
+  --success: #4f9a76;
+  --success-bg: #eaf6f0;
+  --error: #c0392b;
+  --error-bg: #fdeeec;
+  --info-bg: var(--pale-pink);
+
+  /* Typography */
+  --font: "Nunito", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --fs-xs: 0.78rem;
+  --fs-sm: 0.9rem;
+  --fs-base: 1rem;
+  --fs-lg: 1.2rem;
+  --fs-xl: 1.6rem;
+  --fs-2xl: 2.1rem;
+
+  /* Spacing */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+
+  /* Shape */
+  --radius-sm: 10px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --radius-pill: 999px;
+
+  /* Shadows (very subtle) */
+  --shadow-sm: 0 1px 3px rgba(196, 69, 120, 0.06);
+  --shadow-md: 0 6px 18px rgba(196, 69, 120, 0.1);
+
+  /* Motion */
+  --transition: 0.18s ease;
+}

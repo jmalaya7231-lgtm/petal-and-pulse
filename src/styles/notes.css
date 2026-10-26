@@ -1,0 +1,44 @@
+.note-card {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+  padding: var(--space-4) var(--space-5);
+  background: var(--pale-pink);
+  border: 1px solid var(--soft-pink);
+  border-radius: var(--radius-lg);
+}
+.note-card.compact {
+  padding: var(--space-3) var(--space-4);
+  border-radius: var(--radius-md);
+}
+
+.note-icon {
+  flex-shrink: 0;
+  margin-top: 4px;
+}
+
+.note-body {
+  flex: 1;
+  min-width: 0;
+}
+
+.note-text {
+  margin: 0;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+.note-card.compact .note-text { font-size: var(--fs-base); }
+
+.note-from {
+  margin: var(--space-2) 0 0;
+  font-size: var(--fs-sm);
+  font-weight: 700;
+  color: var(--deep-rose);
+}
+
+.note-body .link-btn {
+  margin-top: var(--space-2);
+  min-height: 32px;
+}

@@ -1,0 +1,154 @@
+/* ---------- Upload box ---------- */
+.dropzone {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-6) var(--space-4);
+  text-align: center;
+  background: var(--soft-white);
+  border: 2px dashed var(--soft-pink);
+  border-radius: var(--radius-lg);
+  transition: background var(--transition), border-color var(--transition);
+}
+.dropzone.dragging {
+  background: var(--pale-pink);
+  border-color: var(--rose);
+}
+.dropzone .btn { margin: var(--space-2) 0; }
+
+.file-row {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-3) var(--space-4);
+  background: var(--soft-white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+}
+.file-info {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 0;
+}
+.file-name {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* ---------- Chips (filters, text size) ---------- */
+.chips { display: flex; flex-wrap: wrap; gap: var(--space-2); }
+
+.chip {
+  min-height: 38px;
+  padding: 0 var(--space-4);
+  font-size: var(--fs-sm);
+  font-weight: 700;
+  color: var(--text-muted);
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-pill);
+  cursor: pointer;
+  transition: background var(--transition), color var(--transition),
+    border-color var(--transition);
+}
+.chip:hover { border-color: var(--soft-pink); color: var(--text); }
+.chip.active {
+  background: var(--pale-pink);
+  border-color: var(--soft-pink);
+  color: var(--deep-rose);
+}
+
+/* ---------- Document list ---------- */
+.doc-list { display: flex; flex-direction: column; gap: var(--space-3); }
+
+.doc-card {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  padding: var(--space-4) var(--space-5);
+}
+.doc-main { flex: 1; min-width: 0; }
+.doc-title {
+  display: block;
+  font-weight: 800;
+  color: var(--text);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.doc-title:hover { color: var(--deep-rose); text-decoration: none; }
+.doc-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-2) var(--space-3);
+  margin-top: var(--space-1);
+}
+
+.subject-input { flex: 1; min-width: 200px; max-width: 360px; }
+
+/* ---------- Lesson viewer ---------- */
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-weight: 700;
+  min-height: 44px;
+}
+
+.viewer-tools {
+  display: grid;
+  gap: var(--space-4);
+  grid-template-columns: 1fr;
+}
+@media (min-width: 700px) {
+  .viewer-tools { grid-template-columns: 1fr 1fr; }
+  .viewer-tools .check { grid-column: 1 / -1; }
+}
+
+.reader { padding: var(--space-5); }
+.reader-label {
+  margin-bottom: var(--space-3);
+  font-size: var(--fs-xs);
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--deep-rose);
+}
+.reader-text {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  line-height: 1.8;
+}
+.reader-page + .reader-page {
+  margin-top: var(--space-5);
+  padding-top: var(--space-5);
+  border-top: 1px solid var(--border);
+}
+.reader-sm .reader-text { font-size: 0.92rem; }
+.reader-md .reader-text { font-size: 1.05rem; }
+.reader-lg .reader-text { font-size: 1.25rem; }
+
+.pager {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+}
+.pager-select { width: auto; flex: 1; max-width: 160px; }
+
+/* ---------- Small list used on the dashboard ---------- */
+.mini-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+.mini-list li { display: flex; flex-direction: column; }
+.mini-list a { font-weight: 700; color: var(--text); }
+.mini-list a:hover { color: var(--deep-rose); }

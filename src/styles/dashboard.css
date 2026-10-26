@@ -1,0 +1,81 @@
+/* ---------- Greeting card ---------- */
+.hero { padding: var(--space-6) var(--space-5); }
+
+.hero-date {
+  margin-bottom: var(--space-2);
+  font-weight: 700;
+}
+
+.hero-title-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--space-3);
+}
+.hero-title {
+  font-size: var(--fs-xl);
+  margin-bottom: var(--space-3);
+}
+.hero-input { max-width: 280px; }
+.hero-message {
+  margin: var(--space-3) 0 0;
+  color: var(--deep-rose);
+  font-weight: 600;
+}
+
+/* ---------- Dashboard cards ---------- */
+.dash-grid {
+  display: grid;
+  gap: var(--space-4);
+  grid-template-columns: 1fr;
+}
+@media (min-width: 700px) {
+  .dash-grid { grid-template-columns: 1fr 1fr; }
+}
+
+.card-title {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  margin-bottom: var(--space-3);
+}
+.card-title h3 { margin: 0; font-size: var(--fs-base); }
+
+/* ---------- Empty states ---------- */
+.empty {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-3);
+}
+.empty p { margin: 0; }
+
+.empty-page {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-2);
+  margin-top: var(--space-4);
+  max-width: 520px;
+}
+.empty-page h3, .empty-page p { margin: 0; }
+
+/* ---------- Quick links ---------- */
+.quick-grid {
+  display: grid;
+  gap: var(--space-3);
+  grid-template-columns: 1fr;
+}
+@media (min-width: 600px) {
+  .quick-grid { grid-template-columns: 1fr 1fr; }
+}
+
+.quick-link {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  padding: var(--space-4) var(--space-5);
+  color: var(--text);
+}
+.quick-link:hover { text-decoration: none; }
+.quick-link > div { flex: 1; }

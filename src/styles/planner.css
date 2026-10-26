@@ -1,0 +1,10 @@
+@import "./tokens.css";
+@import "./base.css";
+@import "./components.css";
+@import "./layout.css";
+@import "./dashboard.css";
+@import "./library.css";
+@import "./flashcards.css";
+@import "./quizzes.css";
+@import "./generate.css";
+@import "./planner.css";
